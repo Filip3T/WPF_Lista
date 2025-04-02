@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView Height="400" Width="800" Margin="0,0,0,34" x:Name="Lista">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="50" DisplayMemberBinding="{Binding m_nID}"/>
+                    <GridViewColumn Header="Imie" Width="150" DisplayMemberBinding="{Binding m_strName}"/>
+                    <GridViewColumn Header="Nazwisko" Width="150" DisplayMemberBinding="{Binding m_strLastName}"/>
+                    <GridViewColumn Header="Pesel" Width="150" DisplayMemberBinding="{Binding m_strPesel}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Dodaj" HorizontalAlignment="Right" Margin="0,0,10,9" VerticalAlignment="Bottom" Click="Button_Click"/>
+    </Grid>
+</Window>
