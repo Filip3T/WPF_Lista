@@ -5,15 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1095" MinHeight="450" MinWidth="1095">
     <Grid>
-        <ListView Height="400" Width="800" Margin="0,0,0,34" x:Name="Lista">
+        <ListView Height="400" Width="1075" Margin="0,0,0,34" x:Name="Lista">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" Width="50" DisplayMemberBinding="{Binding m_nID}"/>
-                    <GridViewColumn Header="Imie" Width="150" DisplayMemberBinding="{Binding m_strName}"/>
+                    <GridViewColumn Header="Pesel" Width="80" DisplayMemberBinding="{Binding m_strPesel}"/>
+                    <GridViewColumn Header="Imie" Width="120" DisplayMemberBinding="{Binding m_strName}"/>
+                    <GridViewColumn Header="Drugie imie" Width="120" DisplayMemberBinding="{Binding m_strSecName}"/>
                     <GridViewColumn Header="Nazwisko" Width="150" DisplayMemberBinding="{Binding m_strLastName}"/>
-                    <GridViewColumn Header="Pesel" Width="150" DisplayMemberBinding="{Binding m_strPesel}"/>
+                    <GridViewColumn Header="Data urodzenia" Width="150" DisplayMemberBinding="{Binding m_strDate}"/>
+                    <GridViewColumn Header="Numer telefonu" Width="100" DisplayMemberBinding="{Binding m_strPhone}"/>
+                    <GridViewColumn Header="Adres zamieszkania" Width="150" DisplayMemberBinding="{Binding m_strAdres}"/>
+                    <GridViewColumn Header="Miejscowość" Width="120" DisplayMemberBinding="{Binding m_strLocal}"/>
+                    <GridViewColumn Header="Kod pocztowy" Width="80" DisplayMemberBinding="{Binding m_strPost}"/>
                 </GridView>
             </ListView.View>
         </ListView>

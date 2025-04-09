@@ -5,18 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Window1" Height="250" Width="260">
+        Title="Window1" Height="440" Width="260">
     <Grid>
-        <Label Content="ID" HorizontalAlignment="Left" Margin="35,35,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="100,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="ID"/>
-        <Label Content="Imie" HorizontalAlignment="Left" Margin="35,70,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="100,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Name"/>
-        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="35,105,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="100,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="LastName"/>
-        <Label Content="Pesel" HorizontalAlignment="Left" Margin="35,140,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="100,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Pesel"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="184,185,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="35,185,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Label Content="Pesel&#xD;&#xA;" HorizontalAlignment="Left" Margin="21,34,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,38,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Pesel"/>
+        <Label Content="Imie" HorizontalAlignment="Left" Margin="21,69,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,73,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Name"/>
+        <Label Content="Drugie imie" HorizontalAlignment="Left" Margin="21,104,0,0" VerticalAlignment="Top" FontStyle="Italic" Background="White"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,108,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="SecName"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="21,139,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,143,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="LastName"/>
+        <Label Content="Data ur." HorizontalAlignment="Left" Margin="21,174,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,178,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Date"/>
+        <Label Content="Telefon" HorizontalAlignment="Left" Margin="21,209,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,213,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Phone"/>
+        <Label Content="Adres zam." HorizontalAlignment="Left" Margin="21,244,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,248,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Adres"/>
+        <Label Content="Miejscowość" HorizontalAlignment="Left" Margin="21,279,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,283,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Local"/>
+        <Label Content="Kod pocztowy" HorizontalAlignment="Left" Margin="21,314,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,318,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Post"/>
+        <Button Content="Dodaj" HorizontalAlignment="Right" Margin="0,363,19,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="36,363,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
