@@ -16,7 +16,6 @@
         <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="21,139,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Right" Margin="0,143,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="LastName"/>
         <Label Content="Data ur." HorizontalAlignment="Left" Margin="21,174,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Right" Margin="0,178,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Date"/>
         <Label Content="Telefon" HorizontalAlignment="Left" Margin="21,209,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
         <TextBox HorizontalAlignment="Right" Margin="0,213,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Phone"/>
         <Label Content="Adres zam." HorizontalAlignment="Left" Margin="21,244,0,0" VerticalAlignment="Top"/>
@@ -27,6 +26,7 @@
         <TextBox HorizontalAlignment="Right" Margin="0,318,19,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="Post"/>
         <Button Content="Dodaj" HorizontalAlignment="Right" Margin="0,363,19,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="Anuluj" HorizontalAlignment="Left" Margin="36,363,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <DatePicker HorizontalAlignment="Right" Margin="0,174,26,0" VerticalAlignment="Top" x:Name="Date"/>
 
     </Grid>
 </Window>

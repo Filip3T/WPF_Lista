@@ -8,10 +8,15 @@
         Title="MainWindow" Height="450" Width="1095" MinHeight="450" MinWidth="1095">
     <Grid>
         <ListView Height="400" Width="1075" Margin="0,0,0,34" x:Name="Lista">
+            <ListView.Resources>
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="IsHitTestVisible" Value="False"/>
+                </Style>
+            </ListView.Resources>
             <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Pesel" Width="80" DisplayMemberBinding="{Binding m_strPesel}"/>
-                    <GridViewColumn Header="Imie" Width="120" DisplayMemberBinding="{Binding m_strName}"/>
+                <GridView AllowsColumnReorder="False">
+                    <GridViewColumn Header="Pesel" Width="90" DisplayMemberBinding="{Binding m_strPesel}"/>
+                    <GridViewColumn Header="Imie" Width="110" DisplayMemberBinding="{Binding m_strName}"/>
                     <GridViewColumn Header="Drugie imie" Width="120" DisplayMemberBinding="{Binding m_strSecName}"/>
                     <GridViewColumn Header="Nazwisko" Width="150" DisplayMemberBinding="{Binding m_strLastName}"/>
                     <GridViewColumn Header="Data urodzenia" Width="150" DisplayMemberBinding="{Binding m_strDate}"/>
@@ -23,5 +28,10 @@
             </ListView.View>
         </ListView>
         <Button Content="Dodaj" HorizontalAlignment="Right" Margin="0,0,10,9" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <Button Content="Usuń" HorizontalAlignment="Right" Margin="0,0,57,9" VerticalAlignment="Bottom" Width="38" Click="Button_Click_1"/>
+        <Label Content="Edycja:" HorizontalAlignment="Right" Margin="0,0,106,6" VerticalAlignment="Bottom"/>
+        <Label Content="Plik:" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Bottom"/>
+        <Button Content="Otwórz" HorizontalAlignment="Left" Margin="36,0,0,9" VerticalAlignment="Bottom" Click="Button_Click_2"/>
+        <Button Content="Zapisz" HorizontalAlignment="Left" Margin="88,0,0,9" VerticalAlignment="Bottom" Click="Button_Click_3"/>
     </Grid>
 </Window>
