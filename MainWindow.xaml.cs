@@ -11,6 +11,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Collections.Generic;
 
@@ -31,14 +32,16 @@ namespace WpfApp1
         public string NI_Local { get; set; }
         public string NI_Post { get; set; }
 
-        public NewItem(string n_Pesel, string n_Name, string n_SecName, string n_LastName, string n_Date, string n_Phone, string n_Adres, string n_Local, string n_Post)
+        public NewItem(string n_Pesel, string n_Name, string? n_SecName, string n_LastName, string n_Date, string? n_Phone, string n_Adres, string n_Local, string n_Post)
         {
             NI_Pesel = n_Pesel;
             NI_Name = n_Name;
-            NI_SecName = n_SecName;
+            if (n_SecName != null) NI_SecName = n_SecName;
+            else NI_SecName = " ";
             NI_LastName = n_LastName;
             NI_Date = n_Date;
-            NI_Phone = n_Phone;
+            if (n_Phone != null) NI_Phone = n_Phone;
+            else NI_Phone = "000000000";
             NI_Adres = n_Adres;
             NI_Local = n_Local;
             NI_Post = n_Post;
@@ -123,15 +126,21 @@ namespace WpfApp1
                 {
                     delimiter = ",";
                 }
-                using (StreamWriter writer = new StreamWriter(filePath))
+                using (var writer = new StreamWriter(filePath))
                 {
-                    foreach (NewItem item in Lista.Items)
+                    
+                    var s = Lista.Items;
+                    Debug.WriteLine(s);
+        
+
+                    int i = 0;
+
+                    foreach (var item in s)
                     {
-                        var row = $"{item.NI_Pesel}{delimiter}{item.NI_Name}" +
-                        $"{delimiter}{item.NI_SecName}{delimiter}{item.NI_LastName}" +
-                        $"{delimiter}{item.NI_Date}{delimiter}{item.NI_Phone}" +
-                        $"{delimiter}{item.NI_Adres}{delimiter}{item.NI_Local}{delimiter}{item.NI_Post}";
-                        writer.WriteLine(row);
+                        Debug.WriteLine(item);
+                        //if (i != 9) { var item_str = $"{item}{delimiter}"; writer.Write(item_str); i++; }
+                        //else { var item_str = $"{item}"; writer.WriteLine(item_str); i = 0; } 
+
                     }
                 }
             }

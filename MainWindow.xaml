@@ -15,15 +15,15 @@
             </ListView.Resources>
             <ListView.View>
                 <GridView AllowsColumnReorder="False">
-                    <GridViewColumn Header="Pesel" Width="90" DisplayMemberBinding="{Binding m_strPesel}"/>
-                    <GridViewColumn Header="Imie" Width="110" DisplayMemberBinding="{Binding m_strName}"/>
-                    <GridViewColumn Header="Drugie imie" Width="120" DisplayMemberBinding="{Binding m_strSecName}"/>
-                    <GridViewColumn Header="Nazwisko" Width="150" DisplayMemberBinding="{Binding m_strLastName}"/>
-                    <GridViewColumn Header="Data urodzenia" Width="150" DisplayMemberBinding="{Binding m_strDate}"/>
-                    <GridViewColumn Header="Numer telefonu" Width="100" DisplayMemberBinding="{Binding m_strPhone}"/>
-                    <GridViewColumn Header="Adres zamieszkania" Width="150" DisplayMemberBinding="{Binding m_strAdres}"/>
-                    <GridViewColumn Header="Miejscowość" Width="120" DisplayMemberBinding="{Binding m_strLocal}"/>
-                    <GridViewColumn Header="Kod pocztowy" Width="80" DisplayMemberBinding="{Binding m_strPost}"/>
+                    <GridViewColumn Header="Pesel" Width="90" DisplayMemberBinding="{Binding NI_Pesel}"/>
+                    <GridViewColumn Header="Imie" Width="110" DisplayMemberBinding="{Binding NI_Name}"/>
+                    <GridViewColumn Header="Drugie imie" Width="120" DisplayMemberBinding="{Binding NI_SecName}"/>
+                    <GridViewColumn Header="Nazwisko" Width="150" DisplayMemberBinding="{Binding NI_LastName}"/>
+                    <GridViewColumn Header="Data urodzenia" Width="150" DisplayMemberBinding="{Binding NI_Date}"/>
+                    <GridViewColumn Header="Numer telefonu" Width="100" DisplayMemberBinding="{Binding NI_Phone}"/>
+                    <GridViewColumn Header="Adres zamieszkania" Width="150" DisplayMemberBinding="{Binding NI_Adres}"/>
+                    <GridViewColumn Header="Miejscowość" Width="120" DisplayMemberBinding="{Binding NI_Local}"/>
+                    <GridViewColumn Header="Kod pocztowy" Width="80" DisplayMemberBinding="{Binding NI_Post}"/>
                 </GridView>
             </ListView.View>
         </ListView>

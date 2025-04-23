@@ -138,18 +138,7 @@ namespace WpfApp1
                     NewItem item = new NewItem(Pesel.Text, Name.Text, SecName.Text, LastName.Text, data, Phone.Text, Adres.Text, Local.Text, Post.Text);
                     MainWindow mainWindow = Owner as MainWindow;
 
-                    mainWindow.Lista.Items.Add(new
-                    {
-                        m_strName = item.NI_Name,
-                        m_strLastName = item.NI_LastName,
-                        m_strPesel = item.NI_Pesel,
-                        m_strSecName = item.NI_SecName,
-                        m_strDate = item.NI_Date,
-                        m_strPhone = item.NI_Phone,
-                        m_strAdres = item.NI_Adres,
-                        m_strLocal = item.NI_Local,
-                        m_strPost = item.NI_Post
-                    });
+                    mainWindow.Lista.Items.Add(item);
                     this.Close();
                 } else
                 {
