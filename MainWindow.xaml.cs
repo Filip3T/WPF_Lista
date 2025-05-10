@@ -95,18 +95,8 @@ namespace WpfApp1
                         string[] columns = line.Split(delimiter);
                         if (columns != null)
                         {
-                            Lista.Items.Add(new
-                            {
-                                m_strName = columns[1],
-                                m_strLastName = columns[3],
-                                m_strPesel = columns[0],
-                                m_strSecName = columns[2],
-                                m_strDate = columns[4],
-                                m_strPhone = columns[5],
-                                m_strAdres = columns[6],
-                                m_strLocal = columns[7],
-                                m_strPost = columns[8]
-                            });
+                            Lista.Items.Add(new NewItem(columns[0], columns[1], columns[2], columns[3], columns[4], columns[5], columns[6], columns[7], columns[8]
+                            ));
                         }
                     }
                 }
@@ -128,22 +118,26 @@ namespace WpfApp1
                 }
                 using (var writer = new StreamWriter(filePath))
                 {
-                    
                     var s = Lista.Items;
-                    Debug.WriteLine(s);
-        
-
-                    int i = 0;
-
                     foreach (var item in s)
                     {
-                        Debug.WriteLine(item);
-                        //if (i != 9) { var item_str = $"{item}{delimiter}"; writer.Write(item_str); i++; }
-                        //else { var item_str = $"{item}"; writer.WriteLine(item_str); i = 0; } 
+                        var properties = item.GetType().GetProperties();
+                        List<string> values = new List<string>();
+                        foreach (var prop in properties)
+                        {
+                            var value = prop.GetValue(item, null);
+                            values.Add(value?.ToString() ?? "");
+                        }
+                        string line = string.Join(delimiter, values);
+                        writer.WriteLine(line);
 
                     }
                 }
             }
+        }
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

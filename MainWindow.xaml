@@ -5,9 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1095" MinHeight="450" MinWidth="1095">
+        Title="MainWindow" Height="480" Width="1095" MinHeight="450" MinWidth="1095">
     <Grid>
-        <ListView Height="400" Width="1075" Margin="0,0,0,34" x:Name="Lista">
+        <Menu x:Name="menu" VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New" IsEnabled="False"/>
+                <MenuItem Header="Open" Click="Button_Click_2"/>
+                <MenuItem Header="Save" Click="Button_Click_3"/>
+                <Separator/>
+                <MenuItem Header="Exit" Click="Button_Click_4"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="New" Click="Button_Click"/>
+                <MenuItem Header="Remove Selected" Click="Button_Click_1"/>
+            </MenuItem>
+        </Menu>
+        <ListView Height="400" Width="1075" Margin="10,32,10,32" x:Name="Lista">
             <ListView.Resources>
                 <Style TargetType="GridViewColumnHeader">
                     <Setter Property="IsHitTestVisible" Value="False"/>
@@ -27,11 +40,5 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Dodaj" HorizontalAlignment="Right" Margin="0,0,10,9" VerticalAlignment="Bottom" Click="Button_Click"/>
-        <Button Content="Usuń" HorizontalAlignment="Right" Margin="0,0,57,9" VerticalAlignment="Bottom" Width="38" Click="Button_Click_1"/>
-        <Label Content="Edycja:" HorizontalAlignment="Right" Margin="0,0,106,6" VerticalAlignment="Bottom"/>
-        <Label Content="Plik:" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Bottom"/>
-        <Button Content="Otwórz" HorizontalAlignment="Left" Margin="36,0,0,9" VerticalAlignment="Bottom" Click="Button_Click_2"/>
-        <Button Content="Zapisz" HorizontalAlignment="Left" Margin="88,0,0,9" VerticalAlignment="Bottom" Click="Button_Click_3"/>
     </Grid>
 </Window>
