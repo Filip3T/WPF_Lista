@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="480" Width="1095" MinHeight="450" MinWidth="1095">
-    <Grid>
+    <Grid Margin="0,0,0,-29">
         <Menu x:Name="menu" VerticalAlignment="Top">
             <MenuItem Header="File">
                 <MenuItem Header="New" IsEnabled="False"/>
@@ -20,7 +20,7 @@
                 <MenuItem Header="Remove Selected" Click="Button_Click_1"/>
             </MenuItem>
         </Menu>
-        <ListView Height="400" Width="1075" Margin="10,32,10,32" x:Name="Lista">
+        <ListView Height="400" Width="1075" Margin="10,23,10,70" x:Name="Lista">
             <ListView.Resources>
                 <Style TargetType="GridViewColumnHeader">
                     <Setter Property="IsHitTestVisible" Value="False"/>
@@ -40,5 +40,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button Content="O progrmaie" HorizontalAlignment="Left" Margin="10,0,0,39" VerticalAlignment="Bottom" Click="Button_Click_5"/>
     </Grid>
 </Window>

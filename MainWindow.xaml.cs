@@ -35,14 +35,31 @@ namespace WpfApp1
         public NewItem(string n_Pesel, string n_Name, string? n_SecName, string n_LastName, string n_Date, string? n_Phone, string n_Adres, string n_Local, string n_Post)
         {
             NI_Pesel = n_Pesel;
-            NI_Name = n_Name;
-            if (n_SecName != null) NI_SecName = n_SecName;
+            string check_name = n_Name.Trim();
+            check_name = char.ToUpper(check_name[0]) + check_name.Substring(1).ToLower();
+            NI_Name = check_name;
+            if (n_SecName != "" && n_SecName != " " && n_SecName != null) {
+                string check_SecName = n_SecName.Trim();
+                check_SecName = char.ToUpper(check_SecName[0]) + check_SecName.Substring(1).ToLower();
+                NI_SecName = check_SecName;
+            }
             else NI_SecName = " ";
-            NI_LastName = n_LastName;
+            string check_LastName = n_LastName.Trim();
+            check_LastName = char.ToUpper(check_LastName[0]) + check_LastName.Substring(1).ToLower();
+            NI_LastName = check_LastName;
             NI_Date = n_Date;
-            if (n_Phone != null) NI_Phone = n_Phone;
+            if (n_Phone != "" && n_Phone != " " && n_Phone != null) {
+                string check_phone;
+                check_phone = n_Phone.Replace(" ", "");
+                if (!check_phone.StartsWith("+"))
+                {
+                    check_phone = "+48" + check_phone;
+                }
+
+                NI_Phone = check_phone;
+            }
             else NI_Phone = "000000000";
-            NI_Adres = n_Adres;
+            NI_Adres = n_Adres.Trim(); ;
             NI_Local = n_Local;
             NI_Post = n_Post;
         }
@@ -138,6 +155,12 @@ namespace WpfApp1
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Window2 window = new Window2();
+            window.Show();
         }
     }
 }
